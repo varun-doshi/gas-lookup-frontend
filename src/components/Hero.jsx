@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
 const Hero = () => {
-  const [userData, setUserData] = useState({
-    address: "0x00000000000000000000000000",
-    start_date: "00/00/0000",
-    end_date: "00/00/0000",
-  });
+  // const [userData, setUserData] = useState({
+  //   address: "0x00000000000000000000000000",
+  //   start_date: "00/00/0000",
+  //   end_date: "00/00/0000",
+  // });
 
   const [gasSpent, setGasSpent] = useState(0);
 
@@ -25,11 +25,6 @@ const Hero = () => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    console.log(userData);
-  }, [userData]);
-
   return (
     <div id="main-body">
       <h1>Enter account details</h1>
@@ -48,9 +43,6 @@ const Hero = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      {/* <button type="button" onClick={callServer}>
-        Click
-      </button> */}
       <p>{gasSpent}</p>
     </div>
   );

@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./assets/gas-lookup-logo.png";
 import Hero from "./components/Hero";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Hero />
       </header>
+      <Analytics />
     </div>
   );
 }
