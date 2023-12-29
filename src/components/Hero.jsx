@@ -27,23 +27,30 @@ const Hero = () => {
   };
   return (
     <div id="main-body">
-      <h1>Enter account details</h1>
+      <h1 className="heading">Enter account details</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="address">ETH address</label>
-          <input id="address" type="text" />
+        <div className="input-box">
+          <label htmlFor="address">ETH Address</label>
+          <input
+            id="address"
+            type="text"
+            size={45}
+            placeholder="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+          />
         </div>
-        <div>
+        <div className="input-box">
           <label htmlFor="startDate">Start Date</label>
-          <input id="startDate" type="text" />
+          <input id="startDate" type="text" placeholder="20/12/2023" />
         </div>
-        <div>
+        <div className="input-box">
           <label htmlFor="endDate">End Date</label>
-          <input id="endDate" type="text" />
+          <input id="endDate" type="text" placeholder="22/12/2023" />
         </div>
-        <button type="submit">Submit</button>
+        <button className="submit-btn" type="submit">
+          Submit
+        </button>
       </form>
-      <p>{gasSpent}</p>
+      <p id="result">{gasSpent} GWEI</p>
     </div>
   );
 };
